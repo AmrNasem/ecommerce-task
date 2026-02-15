@@ -1,0 +1,77 @@
+[
+  {
+    "id": "u1",
+    "name": "Amr Hassan",
+    "email": "amr@example.com",
+    "password": "123456",
+    "phone": "+201001112233",
+    "address": {
+      "country": "Egypt",
+      "city": "Damietta",
+      "street": "El-Galaa Street",
+      "postalCode": "34511"
+    },
+    "wishlist": ["p1", "p3"],
+    "createdAt": "2025-10-12T10:30:00Z"
+  },
+  {
+    "id": "u2",
+    "name": "Sarah Ahmed",
+    "email": "sarah@example.com",
+    "password": "123456",
+    "phone": "+201223334455",
+    "address": {
+      "country": "Egypt",
+      "city": "Cairo",
+      "street": "Nasr City",
+      "postalCode": "11765"
+    },
+    "wishlist": ["p2", "p5"],
+    "createdAt": "2025-09-05T14:20:00Z"
+  },
+  {
+    "id": "u3",
+    "name": "Mohamed Ali",
+    "email": "mohamed@example.com",
+    "password": "123456",
+    "phone": "+201556667788",
+    "address": {
+      "country": "Egypt",
+      "city": "Alexandria",
+      "street": "Stanley",
+      "postalCode": "21532"
+    },
+    "wishlist": ["p4"],
+    "createdAt": "2025-11-01T09:10:00Z"
+  },
+  {
+    "id": "u4",
+    "name": "Laila Mahmoud",
+    "email": "laila@example.com",
+    "password": "123456",
+    "phone": "+201778889900",
+    "address": {
+      "country": "Egypt",
+      "city": "Giza",
+      "street": "Faisal Street",
+      "postalCode": "12511"
+    },
+    "wishlist": ["p6", "p7"],
+    "createdAt": "2025-12-20T18:45:00Z"
+  },
+  {
+    "id": "u5",
+    "name": "Omar Khaled",
+    "email": "omar@example.com",
+    "password": "123456",
+    "phone": "+201990001122",
+    "address": {
+      "country": "Egypt",
+      "city": "Mansoura",
+      "street": "El-Gomhoria",
+      "postalCode": "35516"
+    },
+    "wishlist": [],
+    "createdAt": "2026-01-10T12:00:00Z"
+  }
+]

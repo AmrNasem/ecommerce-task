@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { Locale, locales } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
+import Header from "@/components/layout/header/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,17 +29,23 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>) {
-  const {locale} = await params;
+  const { locale } = await params;
 
   if (!locales.includes(locale as Locale)) notFound();
 
   const messages = await getMessages();
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
+          <Header user={{
+            id: "u1",
+            name: "Amr Hassan",
+            email: "amr@example.com",
+            password: "123456",
+          }} />
           {children}
         </NextIntlClientProvider>
       </body>

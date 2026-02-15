@@ -1,0 +1,112 @@
+[
+  {
+    "id": "p1",
+    "name_en": "Basic Tee",
+    "name_ar": "تي شيرت أساسي",
+    "price": 19.99,
+    "category": "apparel",
+    "image": "/product-images/basic-tee.jpg",
+    "description_en": "Soft cotton tee.",
+    "description_ar": "تي شيرت قطني ناعم.",
+    "inStock": true
+  },
+  {
+    "id": "p2",
+    "name_en": "Classic Hoodie",
+    "name_ar": "هودي كلاسيكي",
+    "price": 39.99,
+    "category": "apparel",
+    "image": "/product-images/classic-hoodie.webp",
+    "description_en": "Comfortable warm hoodie.",
+    "description_ar": "هودي دافئ ومريح.",
+    "inStock": true
+  },
+  {
+    "id": "p3",
+    "name_en": "Running Sneakers",
+    "name_ar": "حذاء جري",
+    "price": 59.99,
+    "category": "footwear",
+    "image": "/product-images/running-sneakers.webp",
+    "description_en": "Lightweight running sneakers.",
+    "description_ar": "حذاء جري خفيف الوزن.",
+    "inStock": true
+  },
+  {
+    "id": "p4",
+    "name_en": "Leather Wallet",
+    "name_ar": "محفظة جلدية",
+    "price": 24.99,
+    "category": "accessories",
+    "image": "/product-images/leather-wallet.webp",
+    "description_en": "Durable leather wallet.",
+    "description_ar": "محفظة جلدية متينة.",
+    "inStock": true
+  },
+  {
+    "id": "p5",
+    "name_en": "Sports Watch",
+    "name_ar": "ساعة رياضية",
+    "price": 89.99,
+    "category": "accessories",
+    "image": "/product-images/sports-watch.jpeg",
+    "description_en": "Water-resistant sports watch.",
+    "description_ar": "ساعة رياضية مقاومة للماء.",
+    "inStock": true
+  },
+  {
+    "id": "p6",
+    "name_en": "Denim Jacket",
+    "name_ar": "جاكيت جينز",
+    "price": 69.99,
+    "category": "apparel",
+    "image": "/product-images/denim-jacket.webp",
+    "description_en": "Classic blue denim jacket.",
+    "description_ar": "جاكيت جينز أزرق كلاسيكي.",
+    "inStock": true
+  },
+  {
+    "id": "p7",
+    "name_en": "Canvas Backpack",
+    "name_ar": "حقيبة ظهر قماشية",
+    "price": 49.99,
+    "category": "accessories",
+    "image": "/product-images/canvas-backpack.webp",
+    "description_en": "Durable canvas backpack.",
+    "description_ar": "حقيبة ظهر قماشية متينة.",
+    "inStock": true
+  },
+  {
+    "id": "p8",
+    "name_en": "Yoga Pants",
+    "name_ar": "بنطلون يوجا",
+    "price": 29.99,
+    "category": "apparel",
+    "image": "/product-images/yoga-pants.jpg",
+    "description_en": "Comfortable stretch yoga pants.",
+    "description_ar": "بنطلون يوجا مريح ومرن.",
+    "inStock": true
+  },
+  {
+    "id": "p9",
+    "name_en": "Running Socks",
+    "name_ar": "جوارب جري",
+    "price": 9.99,
+    "category": "footwear",
+    "image": "/product-images/running-socks.jpg",
+    "description_en": "Breathable running socks.",
+    "description_ar": "جوارب جري قابلة للتنفس.",
+    "inStock": true
+  },
+  {
+    "id": "p10",
+    "name_en": "Beanie Hat",
+    "name_ar": "قبعة بيانيه",
+    "price": 14.99,
+    "category": "accessories",
+    "image": "/product-images/beanie-hat.webp",
+    "description_en": "Warm knitted beanie.",
+    "description_ar": "قبعة محبوكة دافئة.",
+    "inStock": true
+  }
+]

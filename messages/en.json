@@ -1,5 +1,20 @@
 {
+  "header": {
+    "home": "Home",
+    "categories": "Categories",
+    "about": "About",
+    "contact": "Contact",
+    "search": "Search products...",
+    "auth": {
+      "settings": "Account Settings"
+    }
+
+  },
   "home": {
-    "title": "To get started, edit the page.tsx file."
+    "title": "To get started, edit the page.tsx file.",
+    "products": {
+      "title": "Products",
+      "desc": "Discover our most popular items, carefully selected for quality and style"
+    }
   }
 }
