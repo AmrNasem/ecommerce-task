@@ -43,12 +43,7 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          <Header user={{
-            id: "u1",
-            name: "Amr Hassan",
-            email: "amr@example.com",
-            password: "123456",
-          }} />
+          <Header user={null} />
           {children}
         </NextIntlClientProvider>
       </body>

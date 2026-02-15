@@ -130,7 +130,7 @@ function Header({ user }: { user: IUser | null }) {
               href="/login"
               className="group font-semibold text-[12px] py-1 px-2 cursor-pointer rounded-md text-white bg-primary duration-150 hover:bg-primary/85"
             >
-              Login
+              {t("auth.login")}
             </Link>
           )}
         </div>

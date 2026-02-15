@@ -6,9 +6,46 @@
     "contact": "Contact",
     "search": "Search products...",
     "auth": {
-      "settings": "Account Settings"
+      "settings": "Account Settings",
+      "login": "Login"
     }
-
+  },
+  "auth": {
+    "username": {
+      "label": "Username",
+      "errMessage": "Invalid username"
+    },
+    "email": {
+      "label": "Email",
+      "errMessage": "Invalid email address"
+    },
+    "password": {
+      "label": "Password",
+      "errMessage": "Password must be at least {min} characters"
+    },
+    "re-password": {
+      "label": "Confirm Password",
+      "errMessage": "Passwords don't match"
+    },
+    "validation": {
+      "required": "This field is required"
+    }
+  },
+  "login": {
+    "title": "Login",
+    "submit": { "label": "Login", "loading": "Logging in..." },
+    "guidance": {
+      "label": "Don't have an account? ",
+      "link": "Signup"
+    }
+  },
+  "signup": {
+    "title": "Signup",
+    "submit": { "label": "Signup", "loading": "Signing up..." },
+    "guidance": {
+      "label": "Don't have an account? ",
+      "link": "Login"
+    }
   },
   "home": {
     "title": "To get started, edit the page.tsx file.",
