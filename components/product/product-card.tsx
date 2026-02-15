@@ -5,9 +5,10 @@ import Link from "next/link";
 // import AddToCart from "../cart/add.to-cart";
 import { IProduct } from "@/lib/product/types";
 import { useLocale } from "next-intl";
+import { Locale } from "@/i18n/routing";
 
 function ProductCard({ product }: { product: IProduct }) {
-  const locale = useLocale() as "ar" | "en";
+  const locale = useLocale() as Locale;
 
   return (
     <article className="rounded-lg shadow-lg hover:shadow-xl duration-200 hover:-translate-y-1 block group h-full relative">
