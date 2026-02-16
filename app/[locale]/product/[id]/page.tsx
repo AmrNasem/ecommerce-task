@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 
 const getProductById = async (productId: string) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/product/${productId}`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/product/${productId}`)
     const product = await res.json()
     console.log(product)
     return product.product;

@@ -91,7 +91,13 @@
   },
   "category": {
     "title": "Category",
-    "empty": "No Products with this category"
+    "empty": "No Products with this category",
+    "sort": {
+      "label": "Sort by:",
+      "default": "Default",
+      "lower_price": "Lower price",
+      "higher_price": "Higher price"
+    }
   },
   "about": {
     "title": "About us",
@@ -115,6 +121,11 @@
       "email": "Invalid email",
       "message": "Message too short"
     }
-
-  }
+  },
+  "notFound": {
+  "title": "Page not found",
+  "description": "Sorry, we couldn't find the page you're looking for. It may have been moved or deleted.",
+  "backHome": "Back to home",
+  "continueShopping": "Continue shopping"
+}
 }

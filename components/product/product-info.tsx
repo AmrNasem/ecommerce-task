@@ -39,7 +39,7 @@ function ProductInfo({
 
       <div className="flex items-start gap-2 justify-between text-muted-foreground">
         <p className="font-semibold text-[13px]">{product[`description_${locale}`]}</p>
-      <Link href={`/category/${product.category}`} className="bg-primary text-white text-[13px] font-semibold rounded-md px-2 py-1 my-2">
+      <Link href={`/category/${product.category}`} className="bg-primary text-white text-[13px] font-semibold rounded-md px-2 py-1">
         {product.category}
       </Link>
       </div>
