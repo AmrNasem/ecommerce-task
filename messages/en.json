@@ -92,5 +92,29 @@
   "category": {
     "title": "Category",
     "empty": "No Products with this category"
+  },
+  "about": {
+    "title": "About us",
+    "description": "We are a modern ecommerce store providing high-quality products with fast delivery and secure payment. Our mission is to provide the best shopping experience possible.",
+    "tips": [
+      "Premium quality products",
+      "Fast worldwide shipping",
+      "24/7 customer support"
+    ]
+  },
+  "contact": {
+    "title": "Contact us",
+    "name": "Your name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send message",
+    "loading": "Sending...",
+    "successMessage": "Message sent successfully",
+    "validation": {
+      "name": "Name too short",
+      "email": "Invalid email",
+      "message": "Message too short"
+    }
+
   }
 }

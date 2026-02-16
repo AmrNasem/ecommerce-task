@@ -1,8 +1,6 @@
 import { Heart, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-// import RemoveFromCart from "../cart/remove-from-cart";
-// import AddToCart from "../cart/add.to-cart";
 import { IProduct } from "@/lib/product/types";
 import { useLocale, useTranslations } from "next-intl";
 import { Locale } from "@/i18n/routing";
