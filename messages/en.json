@@ -7,7 +7,8 @@
     "search": "Search products...",
     "auth": {
       "settings": "Account Settings",
-      "login": "Login"
+      "login": "Login",
+      "logout": "Logout"
     }
   },
   "auth": {
@@ -46,6 +47,11 @@
       "label": "Don't have an account? ",
       "link": "Login"
     }
+  },
+  "api": {
+    "email_exists": "Email already exists",
+    "password_not_match": "Passwords don't match",
+    "invalid_credentials": "Invalid credentials"
   },
   "home": {
     "title": "To get started, edit the page.tsx file.",

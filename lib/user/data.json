@@ -3,7 +3,7 @@
     "id": "u1",
     "name": "Amr Hassan",
     "email": "amr@example.com",
-    "password": "123456",
+    "password": "12345678",
     "phone": "+201001112233",
     "address": {
       "country": "Egypt",
@@ -18,7 +18,7 @@
     "id": "u2",
     "name": "Sarah Ahmed",
     "email": "sarah@example.com",
-    "password": "123456",
+    "password": "12345678",
     "phone": "+201223334455",
     "address": {
       "country": "Egypt",
@@ -33,7 +33,7 @@
     "id": "u3",
     "name": "Mohamed Ali",
     "email": "mohamed@example.com",
-    "password": "123456",
+    "password": "12345678",
     "phone": "+201556667788",
     "address": {
       "country": "Egypt",
@@ -48,7 +48,7 @@
     "id": "u4",
     "name": "Laila Mahmoud",
     "email": "laila@example.com",
-    "password": "123456",
+    "password": "12345678",
     "phone": "+201778889900",
     "address": {
       "country": "Egypt",
@@ -63,7 +63,7 @@
     "id": "u5",
     "name": "Omar Khaled",
     "email": "omar@example.com",
-    "password": "123456",
+    "password": "12345678",
     "phone": "+201990001122",
     "address": {
       "country": "Egypt",

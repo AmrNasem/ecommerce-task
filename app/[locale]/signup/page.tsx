@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import Link from "next/link"
+import { redirect, useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form"
 import z from "zod";
 
@@ -18,10 +19,29 @@ type Fields = z.infer<typeof Schema>;
 function Signup() {
   const t = useTranslations("signup");
   const tAuth = useTranslations("auth");
-  const { handleSubmit, register, formState: { isSubmitting: isPending, errors } } = useForm<Fields>({ resolver: zodResolver(Schema) });
+  const { handleSubmit, register, formState: { isSubmitting: isPending, errors }, setError } = useForm<Fields>({ resolver: zodResolver(Schema) });
+  const router = useRouter();
 
   const onSubmit: SubmitHandler<Fields> = async (data) => {
-    console.log(data);
+    try {
+      const res = await fetch("/api/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+      const newUser = await res.json();
+      if (newUser.error) throw new Error(newUser.error)
+
+      router.refresh()
+      router.replace("/")
+    } catch (err) {
+      console.log(err)
+      setError("root", {
+        message: err instanceof Error ? err.message : "Something went wrong"
+      })
+    }
   }
 
   return <div className="flex items-center justify-center min-h-[calc(100dvh-62.4px)] bg-gray-50">
@@ -84,7 +104,7 @@ function Signup() {
             />
             {
               errors.password && <p className="text-sm text-red-500 mt-1">
-                {tAuth(`email.errMessage`, { min: 8 })}
+                {tAuth(`password.errMessage`, { min: 8 })}
 
               </p>
             }
@@ -104,7 +124,7 @@ function Signup() {
             />
             {
               errors.rePassword && <p className="text-sm text-red-500 mt-1">
-                {tAuth(`email.errMessage`, { min: 8 })}
+                {tAuth(`re-password.errMessage`, { min: 8 })}
 
               </p>
             }
@@ -121,7 +141,7 @@ function Signup() {
             {isPending ? t("submit.loading") : t("submit.label")}
           </Button>
           {
-            errors.root && <p className="text-sm text-red-500 mt-1">
+            errors.root && <p className="text-sm text-red-500 mt-1 text-center">
               {errors.root.message}
             </p>
           }

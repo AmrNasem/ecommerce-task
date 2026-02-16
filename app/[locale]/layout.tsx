@@ -6,6 +6,8 @@ import { Locale, locales } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
 import Header from "@/components/layout/header/header";
+import HydrateUser from "@/components/auth/hydrate-user";
+import { getUserFromCookie } from "@/lib/user/utils";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,13 +39,16 @@ export default async function RootLayout({
   if (!locales.includes(locale as Locale)) notFound();
 
   const messages = await getMessages();
+  const user = await getUserFromCookie();
+
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          <Header user={null} />
+          <HydrateUser user={user} />
+          <Header user={user} />
           {children}
         </NextIntlClientProvider>
       </body>

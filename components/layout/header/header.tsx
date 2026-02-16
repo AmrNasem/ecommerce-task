@@ -14,6 +14,7 @@ import {
 import { IUser } from "@/lib/user/types";
 import { useLocale, useTranslations } from "next-intl";
 import LangSwitcher from "./lang-switcher";
+import LogoutButton from "@/components/auth/logout-button";
 
 const links = [
   {
@@ -89,22 +90,18 @@ function Header({ user }: { user: IUser | null }) {
           </Link>
           {user ? (
             <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="rounded-full border border-black/5 p-0 flex items-center justify-center"
-                >
-                  <Avatar className="h-7 w-7">
-                    <AvatarImage src={user.image} alt={user.name} />
-                    <AvatarFallback>
-                      {user.name
-                        .split(" ")
-                        .slice(0, 2)
-                        .map((name) => name[0].toUpperCase())}
-                    </AvatarFallback>
-                  </Avatar>
-                </Button>
+              <DropdownMenuTrigger
+                className="rounded-full border border-black/5 p-0 flex items-center justify-center"
+              >
+                <Avatar className="h-7 w-7">
+                  <AvatarImage src={user.image} alt={user.name} />
+                  <AvatarFallback>
+                    {user.name
+                      .split(" ")
+                      .slice(0, 2)
+                      .map((name) => name[0].toUpperCase())}
+                  </AvatarFallback>
+                </Avatar>
               </DropdownMenuTrigger>
               <DropdownMenuContent align={align} className="z-100">
                 <DropdownMenuLabel className="flex flex-col">
@@ -118,11 +115,11 @@ function Header({ user }: { user: IUser | null }) {
                   {t("auth.settings")}
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                {/* <LogoutButton className="block w-full">
-                  <DropdownMenuItem className="text-xs text-destructive focus:bg-destructive/10">
-                    Logout
+                <LogoutButton className="block w-full">
+                  <DropdownMenuItem className="text-xs text-destructive focus:bg-destructive/10 cursor-pointer">
+                    {t("auth.logout")}
                   </DropdownMenuItem>
-                </LogoutButton> */}
+                </LogoutButton>
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
