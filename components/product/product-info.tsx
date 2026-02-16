@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Locale } from "@/i18n/routing";
 import { Badge } from "../ui/badge";
+import Link from "next/link";
 
 function ProductInfo({
   product,
@@ -38,14 +39,14 @@ function ProductInfo({
 
       <div className="flex items-start gap-2 justify-between text-muted-foreground">
         <p className="font-semibold text-[13px]">{product[`description_${locale}`]}</p>
-      <Badge >
+      <Link href={`/category/${product.category}`} className="bg-primary text-white text-[13px] font-semibold rounded-md px-2 py-1 my-2">
         {product.category}
-      </Badge>
+      </Link>
       </div>
       {
-        product.inStock ?
-          <Badge className="texts-lg bg-primary/70 text-white font-semibold my-2">{t("in-stock")}</Badge>
-        : <Badge className="tesxt-lg text-destructive border-destructive bg-red-50 font-semibold my-2">{t("out-of-stock")}</Badge>
+        !product.inStock ?
+          <Badge>{t("in-stock")}</Badge>
+        : <Badge className="text-destructive border-destructive bg-red-50 font-semibold my-2">{t("out-of-stock")}</Badge>
       }
       <div className="flex gap-2 flex-wrap justify-between items-center my-5">
         <div className="flex gap-2 items-end font-semibold">

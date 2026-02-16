@@ -50,7 +50,7 @@ function Login() {
     }
   };
   return (
-    <div className="flex items-center justify-center min-h-[calc(100dvh-62.4px)] bg-gray-50">
+    <main className="flex items-center justify-center min-h-[calc(100dvh-62.4px)] bg-gray-50">
       <div className="w-full max-w-md">
         <div className="p-8 bg-white rounded-lg shadow-md border border-gray-300 -translate-y-20">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
@@ -119,7 +119,7 @@ function Login() {
           </p>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

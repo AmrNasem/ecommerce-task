@@ -40,6 +40,7 @@ function ProductCard({ product }: { product: IProduct }) {
         <h3 className="text-primary font-semibold text-sm mb-2 line-clamp-2">
           <Link href={`/product/${product.id}`}>{product[`name_${locale}`]}</Link>
         </h3>
+        
         <div className="flex gap-1 items-end">
           <span className="text-primary font-semibold">${product.price}</span>
         </div>

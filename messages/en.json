@@ -81,7 +81,6 @@
       "total": "Total",
       "submit": "Continue to checkout",
       "cancel": "Continue Shopping"
-
     }
   },
   "product": {
@@ -89,5 +88,9 @@
     "description": "Description for this product",
     "in-stock": "In Stock",
     "out-of-stock": "Out of Stock"
+  },
+  "category": {
+    "title": "Category",
+    "empty": "No Products with this category"
   }
 }
