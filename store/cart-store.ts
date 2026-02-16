@@ -18,11 +18,12 @@ export const useCartStore = create<CartStore>((set, get) => ({
   })),
   addToCart: (product) => {
     const cartItems = get().items;
-    const existing = cartItems.find((item) => item.id === product.id);
+    const existing = cartItems.find((item) => item.product.id === product.id);
+    console.log(product)
     if (existing)
       set({
         items: cartItems.map((item) =>
-          item.product.id === existing.id
+          item.id === existing.id
             ? { ...item, quantity: item.quantity + 1 }
             : item,
         ),

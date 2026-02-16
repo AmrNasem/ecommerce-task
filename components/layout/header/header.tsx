@@ -15,6 +15,7 @@ import { IUser } from "@/lib/user/types";
 import { useLocale, useTranslations } from "next-intl";
 import LangSwitcher from "./lang-switcher";
 import LogoutButton from "@/components/auth/logout-button";
+import CartNavigator from "./cart-navigator";
 
 const links = [
   {
@@ -45,9 +46,7 @@ function Header({ user }: { user: IUser | null }) {
             <Menu className="size-4" />
           </button>
           <Link href="/" className="flex gap-1 items-center">
-            {/* <span className="w-6 h-6 rounded-lg bg-primary text-white flex justify-center items-center">
-              C
-            </span> */}
+
             <h4 className="font-semibold">Ecommerce Task</h4>
           </Link>
         </div>
@@ -85,9 +84,7 @@ function Header({ user }: { user: IUser | null }) {
             <Search className="size-4 text-foreground" />
           </button>
 
-          <Link href="/cart" className="hover:bg-[#e9ebef] p-1 rounded-md duration-150 cursor-pointer">
-            <ShoppingCart className="size-4 text-foreground" />
-          </Link>
+          <CartNavigator />
           {user ? (
             <DropdownMenu>
               <DropdownMenuTrigger

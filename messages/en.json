@@ -82,6 +82,8 @@
       "cancel": "Continue Shopping"
 
     }
+  },
+  "product": {
+    "add-to-cart": "Add to Cart"
   }
-
 }

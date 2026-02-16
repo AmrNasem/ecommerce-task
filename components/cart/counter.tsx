@@ -1,8 +1,7 @@
 "use client";
 
-// import useDebounce from "@/hooks/use-debounce";
 import { cn } from "@/lib/utils";
-import { memo, useCallback, useMemo, useState } from "react";
+import { memo, useCallback, useState } from "react";
 import { Button } from "../ui/button";
 import { Minus, Plus } from "lucide-react";
 
@@ -15,22 +14,22 @@ type CounterProps = {
 
 function Counter({ action, value = 1, className = "", maximum = 5 }: CounterProps) {
   const [counter, setCounter] = useState(value);
-  const [confirmedCounter, setConfirmedCounter] = useState(counter);
+  // const [confirmedCounter, setConfirmedCounter] = useState(counter);
 
-  const handleSuccess = useCallback(() => {
-    setConfirmedCounter(counter);
-  }, [counter]);
-  const handleFailure = useCallback(() => {
-    setCounter(confirmedCounter);
-  }, [confirmedCounter]);
+  // const handleSuccess = useCallback(() => {
+  //   setConfirmedCounter(counter);
+  // }, [counter]);
+  // const handleFailure = useCallback(() => {
+  //   setCounter(confirmedCounter);
+  // }, [confirmedCounter]);
 
-  const options = useMemo(
-    () => ({
-      onSuccess: handleSuccess,
-      onFailure: handleFailure,
-    }),
-    [handleSuccess, handleFailure],
-  );
+  // const options = useMemo(
+  //   () => ({
+  //     onSuccess: handleSuccess,
+  //     onFailure: handleFailure,
+  //   }),
+  //   [handleSuccess, handleFailure],
+  // );
 
   // const { execute, isPending } = useDebounce(action, 1000, options);
 
