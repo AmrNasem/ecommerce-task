@@ -6,6 +6,7 @@
   --foreground: #171717;
   --secondary: #f2edee;
   --destructive: rgb(212, 24, 61);
+  --muted: #ececf0; 
 }
 
 @theme inline {
@@ -14,6 +15,7 @@
   --color-foreground: var(--foreground);
   --color-secondary: var(--secondary);
   --color-destructive: var(--destructive);
+  --color-muted: var(--muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

@@ -54,10 +54,34 @@
     "invalid_credentials": "Invalid credentials"
   },
   "home": {
+    "metadata": {
+      "title": "Homepage | Ecommerce Task",
+      "description": "This is the homepage description"
+    },
     "title": "To get started, edit the page.tsx file.",
     "products": {
       "title": "Products",
       "desc": "Discover our most popular items, carefully selected for quality and style"
     }
+  },
+  "cart": {
+    "metadata": {
+      "title": "My Cart | Ecommerce Task"
+    },
+    "title": "My Cart",
+    "empty": "Your cart is empty",
+    "checkout": {
+      "title": "Continue Shopping",
+      "summary": "Order Summary",
+      "coupon": "Have a coupon?",
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "tax": "Estimated tax",
+      "total": "Total",
+      "submit": "Continue to checkout",
+      "cancel": "Continue Shopping"
+
+    }
   }
+
 }
