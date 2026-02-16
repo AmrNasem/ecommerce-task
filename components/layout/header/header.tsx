@@ -1,4 +1,4 @@
-import { Menu, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "../../ui/avatar";
 import {
@@ -15,6 +15,7 @@ import { useLocale, useTranslations } from "next-intl";
 import LangSwitcher from "./lang-switcher";
 import LogoutButton from "@/components/auth/logout-button";
 import CartNavigator from "./cart-navigator";
+import MobileAside from "./aside";
 
 const links = [
   {
@@ -41,11 +42,11 @@ function Header({ user }: { user: IUser | null }) {
     <header className="py-3 border-b z-100 border-gray-200 sticky top-0 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <nav className="mycontainer flex justify-between gap-2 items-center">
         <div className="flex gap-2 items-center">
-          <button className="md:hidden hover:bg-[#e9ebef] p-1 rounded-md duration-150 cursor-pointer">
+          {/* <button className="md:hidden hover:bg-[#e9ebef] p-1 rounded-md duration-150 cursor-pointer">
             <Menu className="size-4" />
-          </button>
+          </button> */}
+          <MobileAside className="md:hidden" />
           <Link href="/" className="flex gap-1 items-center">
-
             <h4 className="font-semibold text-nowrap">Ecommerce Task</h4>
           </Link>
         </div>
@@ -118,7 +119,7 @@ function Header({ user }: { user: IUser | null }) {
           ) : (
             <Link
               href="/login"
-              className="group font-semibold text-nowrap text-[12px] py-1 px-2 cursor-pointer rounded-md text-white bg-primary duration-150 hover:bg-primary/85"
+              className="text-nowrap group font-semibold text-[12px] py-1 px-2 cursor-pointer rounded-md text-white bg-primary duration-150 hover:bg-primary/85"
             >
               {t("auth.login")}
             </Link>
