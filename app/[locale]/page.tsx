@@ -1,3 +1,5 @@
+import CategoryCards from "@/components/homepage/category-cards";
+import Hero from "@/components/homepage/hero";
 import Products from "@/components/homepage/products";
 import { getTranslations } from "@/i18n/get-translations";
 import { Locale } from "@/i18n/routing";
@@ -14,7 +16,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 
 export default function Home() {
   return (
-    <main className="mycontainer">
+    <main>
+      <Hero />
+      <CategoryCards />
       <Products />
     </main>
   );

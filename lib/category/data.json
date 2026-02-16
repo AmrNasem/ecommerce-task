@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "apparel",
+    "name_en": "Apparel",
+    "name_ar": "ملابس",
+    "image": "/product-images/basic-tee.jpg"
+  },
+  {
+    "slug": "footwear",
+    "name_en": "Shoes",
+    "name_ar": "أحذية",
+    "image": "/product-images/running-sneakers.webp"
+  },
+  {
+    "slug": "accessories",
+    "name_en": "Accessories",
+    "name_ar": "إكسسوارات",
+    "image": "/product-images/canvas-backpack.webp"
+  }
+]

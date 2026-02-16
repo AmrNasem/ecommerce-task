@@ -1,5 +1,6 @@
 import SortSelect from "@/components/category/sort-select";
 import ProductList from "@/components/product/product-list";
+import { Locale } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 
 async function getProducts(category: string, sort: string) {
@@ -8,11 +9,11 @@ async function getProducts(category: string, sort: string) {
 }
 
 
-async function page({ params, searchParams }: { params: Promise<{ slug: string }>, searchParams: Promise<{ sort: string }> }) {
-  const { slug } = await params;
+async function page({ params, searchParams }: { params: Promise<{ slug: string, locale: Locale }>, searchParams: Promise<{ sort: string }> }) {
+  const { slug, locale } = await params;
   const { sort } = await searchParams;
 
-  const products = await getProducts(slug, sort || "");
+  const { products, category } = await getProducts(slug, sort || "");
   const t = await getTranslations()
 
   return (
@@ -21,7 +22,7 @@ async function page({ params, searchParams }: { params: Promise<{ slug: string }
         <span className="font-semibold me-2">
           {t("category.title")}:
         </span>
-        {slug}
+        {category[`name_${locale}`]}
       </h1>
       {
         products.length ?

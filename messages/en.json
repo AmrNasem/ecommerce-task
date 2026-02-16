@@ -52,12 +52,25 @@
     "email_exists": "Email already exists",
     "password_not_match": "Passwords don't match",
     "invalid_credentials": "Invalid credentials",
-    "product_not_found": "Product Not found"
+    "product_not_found": "Product Not found",
+    "category_not_exist": "Couldn't find category"
   },
   "home": {
     "metadata": {
       "title": "Homepage | Ecommerce Task",
       "description": "This is the homepage description"
+    },
+    "hero": {
+      "title": "Discover Your Perfect Need",
+      "description": "Discover quality products curated for your everyday needs, and enjoy a seamless checkout experience — all in one place.",
+      "shop": "Shop Now",
+      "join": "Sign Up",
+      "customers": "Happy Customers",
+      "products": "Products",
+      "rating": "Rating"
+    },
+    "categories": {
+      "title": "Shop by Category"
     },
     "title": "To get started, edit the page.tsx file.",
     "products": {
@@ -123,9 +136,9 @@
     }
   },
   "notFound": {
-  "title": "Page not found",
-  "description": "Sorry, we couldn't find the page you're looking for. It may have been moved or deleted.",
-  "backHome": "Back to home",
-  "continueShopping": "Continue shopping"
-}
+    "title": "Page not found",
+    "description": "Sorry, we couldn't find the page you're looking for. It may have been moved or deleted.",
+    "backHome": "Back to home",
+    "continueShopping": "Continue shopping"
+  }
 }

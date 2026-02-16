@@ -52,12 +52,25 @@
     "email_exists": "هذا البريد مستخدم بالفعل",
     "password_not_match": "كلمة السر غير متطابقة",
     "invalid_credentials": "خطأ في البريد الإلكتروني أو كلمة السر",
-    "product_not_found": "المنتج غير موجود"
+    "product_not_found": "المنتج غير موجود",
+    "category_not_exist": "لم يتم العثور على الفئة"
   },
   "home": {
     "metadata": {
       "title": "الصفحة الرئيسية | Ecommerce Task",
       "description": "هذا هو وصف الصفحة الرئيسية"
+    },
+    "hero": {
+      "title": "اكتشف احتياجاتك المثالية",
+      "description": "اكتشف منتجات عالية الجودة مصممة خصيصاً لتلبية احتياجاتك اليومية، واستمتع بتجربة دفع سلسة - كل ذلك في مكان واحد.",
+      "shop": "تسوق الآن",
+      "join": "تسجيل حسـاب",
+      "customers": "عملاء سعداء",
+      "products": "منتج",
+      "rating": "تقييـم"
+    },
+    "categories": {
+      "title": "تسوق بالفئة"
     },
     "title": "للبدء، قم بتحرير ملف page.tsx",
     "products": {
