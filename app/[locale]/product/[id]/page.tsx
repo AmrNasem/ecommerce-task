@@ -1,5 +1,6 @@
 // import Thumbnails from "@/components/product/single-product/thumbnails";
 import ProductInfo from "@/components/product/product-info";
+import { Locale } from "@/i18n/routing";
 import { getLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
@@ -32,25 +33,59 @@ async function SingleProduct({
   );
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const { id } = await params;
-  const locale = await getLocale();
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: Promise<{ id: string }>;
+// }) {
+//   const { id } = await params;
+//   const locale = await getLocale();
+//   const product = await getProductById(id);
+
+//   return {
+//     title: `${product[`name_${locale}`]} | Ecommerce Task`,
+//     description: product[`description_${locale}`],
+//     openGraph: {
+//       title: product[`name_${locale}`],
+//       description: product[`description_${locale}`],
+//       images: [product.image],
+//       url: `/product/${id}`,
+//     },
+//     robots: { index: true, follow: true },
+//   };
+// }
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string; locale: Locale }> }) {
+  const { id, locale } = await params;
   const product = await getProductById(id);
 
+  const title = product[`name_${locale}`];
+  const description = product[`description_${locale}`];
+
   return {
-    title: `${product[`name_${locale}`]} | Ecommerce Task`,
-    description: product[`description_${locale}`],
+    title,
+    description,
+
     openGraph: {
-      title: product[`name_${locale}`],
-      description: product[`description_${locale}`],
+      title,
+      description,
       images: [product.image],
-      url: `/product/${id}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/product/${id}`,
     },
-    robots: { index: true, follow: true },
+
+    twitter: {
+      title,
+      description,
+      images: [product.image],
+    },
+
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/product/${id}`,
+      languages: {
+        en: `${process.env.NEXT_PUBLIC_BASE_URL}/en/product/${id}`,
+        ar: `${process.env.NEXT_PUBLIC_BASE_URL}/ar/product/${id}`,
+      },
+    },
   };
 }
 
