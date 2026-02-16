@@ -51,7 +51,8 @@
   "api": {
     "email_exists": "Email already exists",
     "password_not_match": "Passwords don't match",
-    "invalid_credentials": "Invalid credentials"
+    "invalid_credentials": "Invalid credentials",
+    "product_not_found": "Product Not found"
   },
   "home": {
     "metadata": {
@@ -84,6 +85,9 @@
     }
   },
   "product": {
-    "add-to-cart": "Add to Cart"
+    "add-to-cart": "Add to Cart",
+    "description": "Description for this product",
+    "in-stock": "In Stock",
+    "out-of-stock": "Out of Stock"
   }
 }

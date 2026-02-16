@@ -8,13 +8,14 @@ import { Trash2 } from "lucide-react";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { ICartItem } from "@/lib/cart/types";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Locale } from "@/i18n/routing";
 import { useCartStore } from "@/store/cart-store";
 
 function CartItem({ item }: { item: ICartItem }) {
   const removeFromCart = useCartStore(state => state.removeFromCart)
   const updateQuantity = useCartStore(state => state.updateQuantity);
+  const t = useTranslations("product")
 
   const [isPending, startTransition] = useTransition();
   const locale = useLocale() as Locale;
@@ -66,7 +67,7 @@ function CartItem({ item }: { item: ICartItem }) {
           </Link>
         </h3>
         <p className="line-clamp-1 text-muted-foreground text-[12px] my-2">
-          {locale === "ar" ? "وصف لهذا المنتج" : "Description for this product"}
+          {t("description")}
         </p>
         <div className="flex text-xl my-2 items-center justify-between flex-wrap gap-3">
           <div className="flex gap-1 items-end">
