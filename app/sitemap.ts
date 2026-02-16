@@ -1,17 +1,17 @@
 // app/sitemap.ts
-import { IProduct } from "@/lib/product/types";
 import { MetadataRoute } from "next";
-
-async function getProducts() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/products`);
-  return res.json();
-}
+import categories from "@/lib/category/data.json"
+import products from "@/lib/product/data.json"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const products: IProduct[] = await getProducts();
 
   const productUrls = products.map((p) => ({
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/product/${p.id}`,
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/product/${p.id}`,
+    lastModified: new Date(),
+  }));
+
+  const categoryUrls = categories.map((cat) => ({
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/category/${cat.slug}`,
     lastModified: new Date(),
   }));
 
@@ -21,9 +21,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/shop`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/cart`,
       lastModified: new Date(),
     },
     ...productUrls,
+    ...categoryUrls
   ];
 }
