@@ -52,7 +52,7 @@
     "image": "/product-images/sports-watch.jpeg",
     "description_en": "Water-resistant sports watch.",
     "description_ar": "ساعة رياضية مقاومة للماء.",
-    "inStock": true
+    "inStock": false
   },
   {
     "id": "p6",
@@ -85,7 +85,7 @@
     "image": "/product-images/yoga-pants.jpg",
     "description_en": "Comfortable stretch yoga pants.",
     "description_ar": "بنطلون يوجا مريح ومرن.",
-    "inStock": true
+    "inStock": false
   },
   {
     "id": "p9",
@@ -107,6 +107,6 @@
     "image": "/product-images/beanie-hat.webp",
     "description_en": "Warm knitted beanie.",
     "description_ar": "قبعة محبوكة دافئة.",
-    "inStock": true
+    "inStock": false
   }
 ]

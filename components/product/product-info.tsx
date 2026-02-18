@@ -37,24 +37,29 @@ async function ProductInfo({
       </div>
 
       <div className="flex items-start gap-2 justify-between text-muted-foreground">
-        <p className="font-semibold text-[13px]">{product[`description_${locale}`]}</p>
-        {
-          category &&
-          <Link href={`/category/${product.category}`} className="bg-primary text-white text-[13px] font-semibold rounded-md px-2 py-1">
+        <p className="font-semibold text-[13px]">
+          {product[`description_${locale}`]}
+        </p>
+        {category && (
+          <Link
+            href={`/category/${product.category}`}
+            className="bg-primary text-white text-[13px] font-semibold rounded-md px-2 py-1"
+          >
             {category[`name_${locale}`]}
           </Link>
-        }
+        )}
       </div>
-      {
-        !product.inStock ?
-          <Badge>{t("in-stock")}</Badge>
-          : <Badge className="text-destructive border-destructive bg-red-50 font-semibold my-2">{t("out-of-stock")}</Badge>
-      }
+      {product.inStock ? (
+        <Badge>{t("in-stock")}</Badge>
+      ) : (
+        <Badge className="text-destructive border-destructive bg-red-50 font-semibold my-2">
+          {t("out-of-stock")}
+        </Badge>
+      )}
       <div className="flex gap-2 flex-wrap justify-between items-center my-5">
         <div className="flex gap-2 items-end font-semibold">
           <span className="text-3xl text-primary">{product.price}$</span>
         </div>
-
       </div>
       <AddToCart
         product={product}

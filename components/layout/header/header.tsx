@@ -1,6 +1,5 @@
-import { Menu, Search, ShoppingCart } from "lucide-react";
+import { Menu, Search } from "lucide-react";
 import Link from "next/link";
-import { Button } from "../../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "../../ui/avatar";
 import {
   DropdownMenu,
@@ -47,7 +46,7 @@ function Header({ user }: { user: IUser | null }) {
           </button>
           <Link href="/" className="flex gap-1 items-center">
 
-            <h4 className="font-semibold">Ecommerce Task</h4>
+            <h4 className="font-semibold text-nowrap">Ecommerce Task</h4>
           </Link>
         </div>
 
@@ -80,9 +79,6 @@ function Header({ user }: { user: IUser | null }) {
             />
           </form>
           <LangSwitcher />
-          <button className="sm:hidden hover:bg-[#e9ebef] p-1 rounded-md duration-150 cursor-pointer">
-            <Search className="size-4 text-foreground" />
-          </button>
 
           <CartNavigator />
           {user ? (
@@ -122,7 +118,7 @@ function Header({ user }: { user: IUser | null }) {
           ) : (
             <Link
               href="/login"
-              className="group font-semibold text-[12px] py-1 px-2 cursor-pointer rounded-md text-white bg-primary duration-150 hover:bg-primary/85"
+              className="group font-semibold text-nowrap text-[12px] py-1 px-2 cursor-pointer rounded-md text-white bg-primary duration-150 hover:bg-primary/85"
             >
               {t("auth.login")}
             </Link>
