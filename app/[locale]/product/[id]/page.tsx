@@ -26,34 +26,12 @@ async function SingleProduct({
 
   return (
     <main className="mycontainer my-10">
-      <div className="my-6 px-2 space-y-12 max-w-[800px] mx-auto">
+      <div className="my-6 px-2 space-y-12 max-w-200 mx-auto">
         <ProductInfo product={product} />
       </div>
     </main>
   );
 }
-
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: Promise<{ id: string }>;
-// }) {
-//   const { id } = await params;
-//   const locale = await getLocale();
-//   const product = await getProductById(id);
-
-//   return {
-//     title: `${product[`name_${locale}`]} | Ecommerce Task`,
-//     description: product[`description_${locale}`],
-//     openGraph: {
-//       title: product[`name_${locale}`],
-//       description: product[`description_${locale}`],
-//       images: [product.image],
-//       url: `/product/${id}`,
-//     },
-//     robots: { index: true, follow: true },
-//   };
-// }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string; locale: Locale }> }) {
   const { id, locale } = await params;
